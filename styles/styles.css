@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    //user-select: none;
+
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #3a3a3a;
+    color:white;
+
+    text-align: center;
+}
+
+pre {
+    text-align: left;
+    padding-bottom: 50px;
+}
+
+input {
+    margin:5px;
+
+    border-radius: 10px;
+    border-color: transparent;
+
+    box-shadow: -5px -5px 13px rgba(163,177,198,0.17), 5px 5px 15px rgba(23,23,23,0.85);
+}
+
+#chatRoomLinkParent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.chatRoomLink {
+    margin: 20px;
+
+    box-shadow: -5px -5px 13px rgba(163,177,198,0.15), 5px 5px 13px rgba(23,23,23,0.85);
+
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+table {
+    margin:auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0vh;
+    width: 100%;
+    font-size: 11px;
+    background-color: rgba(0 0 0 0);
+}
+
+#chatInputContainer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#logoutContainer {
+    text-align: right;
+}
+
+#chatSendButton, #chatReloadButton {
+    width:13%;
+    height:4vh;
+}
+
+#chatInput {
+    width: 65%;
+    height:3vh;
+    font-size: 15px;
+    text-align: left;
+}
+
+#messagesContainer > div {
+    width: 100%;
+    box-shadow: -5px -5px 13px rgba(163,177,198,0.17), 5px 5px 15px rgba(23,23,23,0.65);
+    margin: 20px 0;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+}
+
+#messagesContainer > div > p {
+    margin: 5px;
+}
+
+#messagesContainer {
+    margin-top:50px;
+}
+
+.chatMessage0 {
+    width:20%;
+}
+
+.chatMessage1 {
+    width:60vw;
+    max-width:60vw;
+    word-break: break-all;
+    height: auto;
+    text-align: left;
+}
+
+.chatMessage2 {
+    width:20%;
+    text-align: right;
+}
+
+.chatMessage1 > a {
+    text-decoration: underline;
+}
+
+#exitButtonContainer {
+    text-align: left;
+    position: fixed;
+    top:0;
+}
