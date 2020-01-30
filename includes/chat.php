@@ -23,7 +23,13 @@
                     } else {
                         $timeArray = chat::convertToHumanTime($message[$i]);
 
-                        echo "<p class='chatMessage" . $i . "'>" . $timeArray[0] . " " . $timeArray[1] . " ago</p>";
+                        echo "<p class='chatMessage" . $i . "'>" . $timeArray[0] . " " . $timeArray[1];
+
+                        if($timeArray[0] > 1) {
+                            echo "s ago</p>";
+                        } else {
+                            echo " ago</p>";
+                        }
 
                     }
                 }
@@ -57,17 +63,17 @@
                 let returnArray = [];
 
                 if (timeDifference < 60) {
-                    returnArray = [timeDifference, "seconds"];
+                    returnArray = [timeDifference, "second"];
                 } else if (timeDifference < 60 * 60) {
-                    returnArray = [Math.floor(timeDifference / 60), "minutes"];
+                    returnArray = [Math.floor(timeDifference / 60), "minute"];
                 } else if (timeDifference < 60 * 60 * 24) {
-                    returnArray = [Math.floor(timeDifference / 60 / 60), "hours"];
+                    returnArray = [Math.floor(timeDifference / 60 / 60), "hour"];
                 } else if (timeDifference < 60 * 60 * 24 * 7) {
-                    returnArray = [Math.floor(timeDifference / 60 / 60 / 24), "days"];
+                    returnArray = [Math.floor(timeDifference / 60 / 60 / 24), "day"];
                 } else if (timeDifference < 60 * 60 * 24 * 30) {
-                    returnArray = [Math.floor(timeDifference / 60 / 60 / 24 / 7), "weeks"];
+                    returnArray = [Math.floor(timeDifference / 60 / 60 / 24 / 7), "week"];
                 } else {
-                    returnArray = [Math.floor(timeDifference / 60 / 60 / 24 / 30), "months"];
+                    returnArray = [Math.floor(timeDifference / 60 / 60 / 24 / 30), "month"];
                 }
 
                 return returnArray;

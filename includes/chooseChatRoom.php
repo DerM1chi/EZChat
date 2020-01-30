@@ -1,6 +1,12 @@
-<form method="get" id="logoutContainer">
-    <input type="submit" name="resetSession" value="Logout!" id="logout">
-</form>
+<?php
+    if(isset($_SESSION["userName"])) {
+        ?>
+        <form method="get" id="logoutContainer">
+            <input type="submit" name="resetSession" value="Logout!" id="logout">
+        </form>
+        <?php
+    }
+?>
 <h1>choose chatroom:</h1>
 <div style="" id="chatRoomLinkParent">
     <?php
